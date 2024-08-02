@@ -2,29 +2,24 @@ let rect_width = 200;
 let rect_height = 200;
 let middle = rect_width === rect_height ? rect_width / 2 : 0;
 
-// These are the colours im using
-const Colours = {
-    ONE: "#FF99C8",
-    TWO: "#FCF6BD",
-    THREE: "#D0F4DE",
-    FOUR: "#A9DEF9",
-    FIVE: "#E4C1F9"
-};
-
-// These are the same colours just in RGBA format with
-// the end of the string missing so opacity can be added later
-const Colours_RGBA = {
-    ONE: "rgba(255, 153, 200, ",
-    TWO: "rgba(252, 246, 189, ",
-    THREE: "rgba(208, 244, 222, ",
-    FOUR: "rgba(169, 222, 249, ",
-    FIVE: "rgba(228, 193, 249, "
-};
-
-// For use with Colours_RGBA
-function getColour(colour, opacity) {
-    return colour + opacity + ")"
-}
+/* VARIABLES */
+const directionalLinesStrokeWeight = 100;
+const directionalLinesDashed = false;
+const linesAreRects = false;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 8;
+const centerBackgroundSquareSize = 0; // set to 0 for cool effect
+const centerStarPoints = 12;
+const centerStarColour = Colours.THREE;
+const radiatingCircleDiameter = 75;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 2;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = true;
+/* END VARIABLES */
 
 function setup_wallpaper(pWallpaper) {
     pWallpaper.output_mode(GRID_WALLPAPER);
@@ -44,25 +39,6 @@ function wallpaper_background() {
 }
 
 function my_symbol() {
-    /* VARIABLES */
-    const directionalLinesStrokeWeight = 100;
-    const directionalLinesDashed = false;
-    const linesAreRects = false;
-    const greenSquareSize = 100;
-    const blueCornerStarPoints = 8;
-    const centerBackgroundSquareSize = 0; // set to 0 for cool effect
-    const centerStarPoints = 12;
-    const centerStarColour = Colours.THREE;
-    const radiatingCircleDiameter = 75;
-    const radiatingCircleOpacity = 1;
-    const drawFourCornerStars = false;
-    const PurpleQuadStarPoints = 2;
-    const ThinCenterStarPoints = 12;
-    const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
-    const drawThinCenterStar1 = true;
-    const drawThinCenterStar2 = true;
-    /* END VARIABLES */
-
     strokeWeight(0)
 
     // Radiating transparent circle
@@ -187,4 +163,28 @@ function drawStar(x, y, outerRadius, innerRadius, points) {
     }
 
     endShape(CLOSE);
+}
+
+// These are the colours im using
+const Colours = {
+    ONE: "#FF99C8",
+    TWO: "#FCF6BD",
+    THREE: "#D0F4DE",
+    FOUR: "#A9DEF9",
+    FIVE: "#E4C1F9"
+};
+
+// These are the same colours just in RGBA format with
+// the end of the string missing so opacity can be added later
+const Colours_RGBA = {
+    ONE: "rgba(255, 153, 200, ",
+    TWO: "rgba(252, 246, 189, ",
+    THREE: "rgba(208, 244, 222, ",
+    FOUR: "rgba(169, 222, 249, ",
+    FIVE: "rgba(228, 193, 249, "
+};
+
+// For use with Colours_RGBA
+function getColour(colour, opacity) {
+    return colour + opacity + ")"
 }
