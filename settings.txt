@@ -1,0 +1,161 @@
+Wallpaper 1:
+const directionalLinesStrokeWeight = 100;
+const directionalLinesDashed = false;
+const linesAreRects = false;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 8;
+const centerBackgroundSquareSize = 0; // set to 0 for cool effect
+const centerStarPoints = 12;
+const centerStarColour = Colours.THREE;
+const radiatingCircleDiameter = 75;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 2;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = true;
+
+Wallpaper 2:
+const directionalLinesStrokeWeight = 50;
+const directionalLinesDashed = false;
+const linesAreRects = false;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 8;
+const centerBackgroundSquareSize = 0; // set to 0 for cool effect
+const centerStarPoints = 6;
+const centerStarColour = Colours.THREE;
+const radiatingCircleDiameter = 100;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 6;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = false;
+
+Wallpaper 3:
+const directionalLinesStrokeWeight = 10;
+const directionalLinesDashed = false;
+const linesAreRects = true;
+const greenSquareSize = 50;
+const blueCornerStarPoints = 4;
+const centerBackgroundSquareSize = 75; // set to 0 for cool effect
+const centerStarPoints = 6;
+const centerStarColour = Colours.THREE;
+const radiatingCircleDiameter = 100;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 6;
+const ThinCenterStarPoints = 8;
+const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
+const drawThinCenterStar1 = false;
+const drawThinCenterStar2 = true;
+
+Wallpaper 4:
+const directionalLinesStrokeWeight = 0;
+const directionalLinesDashed = false;
+const linesAreRects = false;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 6;
+const centerBackgroundSquareSize = 100; // set to 0 for cool effect
+const centerStarPoints = 6;
+const centerStarColour = Colours.THREE;
+const radiatingCircleDiameter = 100;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 6;
+const ThinCenterStarPoints = 8;
+const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
+const drawThinCenterStar1 = false;
+const drawThinCenterStar2 = true;
+
+Wallpaper 5:
+const directionalLinesStrokeWeight = 0;
+const directionalLinesDashed = false;
+const linesAreRects = false;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 8;
+const centerBackgroundSquareSize = 100; // set to 0 for cool effect
+const centerStarPoints = 12;
+const centerStarColour = Colours.ONE;
+const radiatingCircleDiameter = 100;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 6;
+const ThinCenterStarPoints = 8;
+const ThinCenterStarColour = getColour(Colours_RGBA.TWO, 0.75);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = true;
+
+Wallpaper 6:
+const directionalLinesStrokeWeight = 0;
+const directionalLinesDashed = true;
+const linesAreRects = true;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 8;
+const centerBackgroundSquareSize = 50; // set to 0 for cool effect
+const centerStarPoints = 0;
+const centerStarColour = Colours.ONE;
+const radiatingCircleDiameter = 100;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = true;
+const PurpleQuadStarPoints = 2;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.THREE, 1);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = false;
+
+Wallpaper 7:
+const directionalLinesStrokeWeight = 2;
+const directionalLinesDashed = true;
+const linesAreRects = true;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 8;
+const centerBackgroundSquareSize = 50; // set to 0 for cool effect
+const centerStarPoints = 0;
+const centerStarColour = Colours.FOUR;
+const radiatingCircleDiameter = 150;
+const radiatingCircleOpacity = 1;
+const drawFourCornerStars = true;
+const PurpleQuadStarPoints = 1;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.THREE, 1);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = false;
+
+Wallpaper 8:
+const directionalLinesStrokeWeight = 125;
+const directionalLinesDashed = true;
+const linesAreRects = true;
+const greenSquareSize = 100;
+const blueCornerStarPoints = 2;
+const centerBackgroundSquareSize = 50; // set to 0 for cool effect
+const centerStarPoints = 2;
+const centerStarColour = "white";
+const radiatingCircleDiameter = 10;
+const radiatingCircleOpacity = 0.5;
+const drawFourCornerStars = true;
+const PurpleQuadStarPoints = 6;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.FIVE, 1);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = true;
+
+Wallpaper 9:
+const directionalLinesStrokeWeight = 0;
+const directionalLinesDashed = true;
+const linesAreRects = true;
+const greenSquareSize = 10;
+const blueCornerStarPoints = 0;
+const centerBackgroundSquareSize = 0; // set to 0 for cool effect
+const centerStarPoints = 2;
+const centerStarColour = "white";
+const radiatingCircleDiameter = 10;
+const radiatingCircleOpacity = 0.5;
+const drawFourCornerStars = false;
+const PurpleQuadStarPoints = 6;
+const ThinCenterStarPoints = 12;
+const ThinCenterStarColour = getColour(Colours_RGBA.FIVE, 1);
+const drawThinCenterStar1 = true;
+const drawThinCenterStar2 = true;
