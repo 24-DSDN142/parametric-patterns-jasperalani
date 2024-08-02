@@ -51,91 +51,126 @@ function my_symbol() {
 
 function drawShapes() {
     /* VARIABLES */
-    const ThinWhiteStarPoints = 0;
-    const directionalLines = 20;
+    const ThinWhiteStarPoints = 12;
+    const directionalLinesStrokeWeight = 100;
     const directionalLinesDashed = false;
+    const PurpleQuadStarPoints = 2;
+    const linesAreRects = false;
+    const greenSquareSize = 100;
+    const blueCornerStarPoints = 8;
+    const centerBackgroundSquareSize = 0; // set to 0 for cool effect
+    const centerStarPoints = 12;
+    const centerStarColour = Colours.THREE;
     /* END VARIABLES */
 
     strokeWeight(0)
 
+    // Directional lines
     push()
-    strokeWeight(directionalLines)
+    strokeWeight(directionalLinesStrokeWeight)
     stroke(getColour(Colours_RGBA.ONE, 0.75))
     if(directionalLinesDashed){
         drawingContext.setLineDash([5, 5]);
     }
     line(0, 0, rect_width, rect_height)
-    // line(rect_width, 0, 0, rect_height)
+    line(rect_width, 0, 0, rect_height)
     // line(rect_width/2, 0, rect_width/2, rect_height)
     // line(0, rect_height/2, rect_width, rect_height/2)
     pop()
 
     push()
-    fill(Colours.FOUR)
-    drawStar(0, 0, 50, 40, 8)
+    fill(Colours.THREE)
+    rotate(-45)
+    square(0, 0, greenSquareSize)
     pop()
 
+    // Blue corner star
     push()
-    drawStar(0, 0, 25, 10, 4)
+    fill(Colours.FOUR)
+    drawStar(0, 0, 50, 40, blueCornerStarPoints)
     pop()
 
-    // VERTICAL LINE
-    // push()
-    // fill(getColour(Colours_RGBA.FIVE, 1))
-    // ellipse(0, 75, 10, 20)
-    // ellipse(0, 100, 10, 10)
-    // ellipse(0, 125, 10, 20)
-    // pop()
-    //
-    // // HORIZONTAL LINE
-    // push()
-    // fill(getColour(Colours_RGBA.FIVE, 1))
-    // ellipse(75, 0, 10, 10)
-    // ellipse(100, 0, 20, 10)
-    // ellipse(125, 0, 10, 10)
-    // pop()
+    // white corner star
+    push()
+    drawStar(0, 0, 25, 10, blueCornerStarPoints/2)
+    pop()
 
     // Background 45deg square
     push()
     fill(Colours.THREE)
     translate(middle, middle)
     rotate(-45)
-    square(0, 0, 125)
+    square(0, 0, centerBackgroundSquareSize)
     pop()
 
     // Large background star
     push()
-    fill(Colours.TWO)
-    drawStar(middle, middle, 75, 70, 12)
+    fill(centerStarColour)
+    drawStar(middle, middle, 50, 20, centerStarPoints)
     pop()
 
-    // Four corner stars
+    // VERTICAL LINE
     push()
-    fill(Colours.ONE)
-    stroke("rgba(255, 255, 255, 0.75)")
-    strokeWeight(5)
-    const smallStarInner = 8;
+    fill(getColour(Colours_RGBA.FIVE, 1))
+    if(linesAreRects){
+        // rect(0, 75, 10, 20)
+        rect(0, 100, 10, 10)
+        // rect(0, 125, 10, 20)
+    }else{
+        // ellipse(0, 75, 10, 20)
+        ellipse(0, 100, 10, 10)
+        // ellipse(0, 125, 10, 20)
+    }
+    pop()
+
+    // HORIZONTAL LINE
+    push()
+    fill(getColour(Colours_RGBA.FIVE, 1))
+    if(linesAreRects) {
+        // rect(75, 0, 10, 10)
+        rect(100, 0, 10, 10)
+        // rect(125, 0, 10, 10)
+    }else{
+        // ellipse(75, 0, 10, 10)
+        ellipse(100, 0, 10, 10)
+        // ellipse(125, 0, 10, 10)
+    }
+    pop()
+
+    // Radiating transparent circles
+    // push()
+    // fill(getColour(Colours_RGBA.FOUR, 0.75))
+    // circle(middle, middle, 35)
+    // fill(getColour(Colours_RGBA.FOUR, 0.5))
+    // circle(middle, middle, 80)
+    // fill(getColour(Colours_RGBA.FOUR, 0.25))
+    // circle(middle, middle, 120)
+    // pop()
+
+    // Four corner stars
+    // push()
+    // fill(Colours.ONE)
+    // stroke("rgba(255, 255, 255, 0.75)")
+    // strokeWeight(0)
+    // const smallStarInner = 8;
+    // // drawStar(middle, middle,25, smallStarInner, PurpleQuadStarPoints)
     // drawStar(50, 50, 25, smallStarInner, PurpleQuadStarPoints)
     // drawStar(150, 50, 25, smallStarInner, PurpleQuadStarPoints*2)
     // drawStar(50, 150, 25, smallStarInner, PurpleQuadStarPoints*2)
     // drawStar(150, 150, 25, smallStarInner, PurpleQuadStarPoints)
-    pop()
-
-    // Circle behind thin white star
-    push()
-    fill(getColour(Colours_RGBA.FOUR, 0.75))
-    circle(middle, middle, 35)
-    fill(getColour(Colours_RGBA.FOUR, 0.5))
-    circle(middle, middle, 80)
-    fill(getColour(Colours_RGBA.FOUR, 0.25))
-    circle(middle, middle, 120)
-    pop()
+    // pop()
 
     // Thin white star
-    push()
-    fill("rgba(0,0,0, 0.5)")
-    drawStar(middle, middle, 75, 10, ThinWhiteStarPoints)
-    pop()
+    // push()
+    // fill(getColour(Colours_RGBA.TWO, 0.75))
+    // // fill("rgba(255, 255, 255, 0.5)")
+    // // fill("white")
+    // drawStar(middle, middle, 75, 10, ThinWhiteStarPoints)
+    // pop()
+
+    // push()
+    // drawStar(middle, middle, 50, 10, 6)
+    // pop()
 
 
 
