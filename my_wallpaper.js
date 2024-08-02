@@ -29,8 +29,8 @@ function getColour(colour, opacity) {
 function setup_wallpaper(pWallpaper) {
     // pWallpaper.output_mode(DEVELOP_GLYPH);
     pWallpaper.output_mode(GRID_WALLPAPER);
-    pWallpaper.resolution(FIT_TO_SCREEN);
-    pWallpaper.show_guide(true); //set this to false when you're ready to print
+    pWallpaper.resolution(NINE_PORTRAIT);
+    pWallpaper.show_guide(false); //set this to false when you're ready to print
 
     //Grid settings
     pWallpaper.grid_settings.cell_width = rect_width;
@@ -61,9 +61,17 @@ function drawShapes() {
     const centerBackgroundSquareSize = 0; // set to 0 for cool effect
     const centerStarPoints = 12;
     const centerStarColour = Colours.THREE;
+    const radiatingCircleDiameter = 75;
+    const radiatingCircleOpacity = 1;
     /* END VARIABLES */
 
     strokeWeight(0)
+
+    // Radiating transparent circle
+    push()
+    fill(getColour(Colours_RGBA.FOUR, radiatingCircleOpacity))
+    circle(middle, middle, radiatingCircleDiameter)
+    pop()
 
     // Directional lines
     push()
@@ -74,8 +82,6 @@ function drawShapes() {
     }
     line(0, 0, rect_width, rect_height)
     line(rect_width, 0, 0, rect_height)
-    // line(rect_width/2, 0, rect_width/2, rect_height)
-    // line(0, rect_height/2, rect_width, rect_height/2)
     pop()
 
     push()
@@ -113,13 +119,9 @@ function drawShapes() {
     push()
     fill(getColour(Colours_RGBA.FIVE, 1))
     if(linesAreRects){
-        // rect(0, 75, 10, 20)
         rect(0, 100, 10, 10)
-        // rect(0, 125, 10, 20)
     }else{
-        // ellipse(0, 75, 10, 20)
         ellipse(0, 100, 10, 10)
-        // ellipse(0, 125, 10, 20)
     }
     pop()
 
@@ -127,25 +129,11 @@ function drawShapes() {
     push()
     fill(getColour(Colours_RGBA.FIVE, 1))
     if(linesAreRects) {
-        // rect(75, 0, 10, 10)
         rect(100, 0, 10, 10)
-        // rect(125, 0, 10, 10)
     }else{
-        // ellipse(75, 0, 10, 10)
         ellipse(100, 0, 10, 10)
-        // ellipse(125, 0, 10, 10)
     }
     pop()
-
-    // Radiating transparent circles
-    // push()
-    // fill(getColour(Colours_RGBA.FOUR, 0.75))
-    // circle(middle, middle, 35)
-    // fill(getColour(Colours_RGBA.FOUR, 0.5))
-    // circle(middle, middle, 80)
-    // fill(getColour(Colours_RGBA.FOUR, 0.25))
-    // circle(middle, middle, 120)
-    // pop()
 
     // Four corner stars
     // push()
@@ -171,11 +159,9 @@ function drawShapes() {
     // push()
     // drawStar(middle, middle, 50, 10, 6)
     // pop()
-
-
-
 }
 
+/* inspiration: https://editor.p5js.org/p5/sketches/Form:_Star */
 function drawStar(x, y, outerRadius, innerRadius, points) {
     const angleStep = (Math.PI * 2) / points;
 
